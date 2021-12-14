@@ -1288,23 +1288,89 @@ abstract contract ERC721Enumerable is ERC721, IERC721Enumerable {
 
 
 contract Dev is ERC721Enumerable, ReentrancyGuard, Ownable {
-
-        string[] private osses = [
-        "Kali Linux",
-        "Ubuntu",
-        "Windows 1.0",
-        "Android Marshmallow",
-        "Windows 95",
-        "FreeBSD",
-        "Slackware Linux",
-        "Chromium OS",
-        "Windows Vista",
-        "Google Chrome OS",
-        "macOS",
-        "DOS",
-        "Linux Mint",
-        "GM-NAA I/O"
+    // https://en.wikipedia.org/wiki/List_of_hip_hop_genres  as of 2021/12/13
+        string[] private genres = [
+        'Alternative hip hop',
+        'Hipster hop',
+        'Boom bap',
+        'Bounce',
+        'British hip hop',
+        'Road rap',
+        'Chopped and screwed'
+        'Chopper',
+        'Cloud rap',
+        'Comedy hip hop',
+        'Crunk',
+        'Crunkcore',
+        'East Coast hip hop',
+        'Freestyle rap',
+        'G-funk',
+        'Hardcore hip hop',
+        'Dirty rap',
+        'Gangsta rap',
+        'Mafioso rap',
+        'Horrorcore',
+        'Memphis rap',
+        'Hyphy',
+        'Jerkin',
+        'Instrumental hip hop',
+        'Latin hip hop',
+        'Chicano rap',
+        'Lofi hip hop',
+        'Miami bass',
+        'Mumble rap',
+        'Nerdcore',
+        'Chap hop',
+        'Political hip hop',
+        'Conscious hip hop',
+        'Progressive rap',
+        'Religious hip hop',
+        'Snap music',
+        'Southern hip hop',
+        'Trap music',
+        'Drill music',
+        'Brooklyn drill'
+// UK drill
+// Latin trap
+// Phonk
+// Tread
+// Turntablism
+// Underground hip hop
+// West Coast hip hop
+// Fusion genres
+// Country rap
+// Electro
+// Emo rap
+// Hip hop soul
+// Hip house
+// Industrial hip hop
+// Jazz rap
+// New jack swing
+// Pop rap
+// Punk rap
+// Ragga hip hop
+// Rap opera
+// Rap rock
+// Rap metal
+// Trap metal
+// Rapcore
+// Trip hop
+// Derived genres
+// Breakbeat
+// Baltimore club
+// Florida breaks
+// Ghetto house
+// Ghettotech
+// Glitch hop
+// Grime
+// Illbient
+// Latin freestyle
+// Wonky
+// Nu metal
+// Funk carioca
+// Reggaeton,
     ];
+
     
     string[] private texteditors = [
         "VS Code",
@@ -1434,8 +1500,8 @@ contract Dev is ERC721Enumerable, ReentrancyGuard, Ownable {
         return uint256(keccak256(abi.encodePacked(input)));
     }
     
-    function getOS(uint256 tokenId) public view returns (string memory) {
-        return pluck(tokenId, "OS", osses);
+    function getGenres(uint256 tokenId) public view returns (string memory) {
+        return pluck(tokenId, "GENRES", genres);
     }
     
     function getTextEditor(uint256 tokenId) public view returns (string memory) {

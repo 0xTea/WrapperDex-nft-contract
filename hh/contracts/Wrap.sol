@@ -1329,46 +1329,8 @@ contract Dev is ERC721Enumerable, ReentrancyGuard, Ownable {
         'Southern hip hop',
         'Trap music',
         'Drill music',
-        'Brooklyn drill'
-// UK drill
-// Latin trap
-// Phonk
-// Tread
-// Turntablism
-// Underground hip hop
-// West Coast hip hop
-// Fusion genres
-// Country rap
-// Electro
-// Emo rap
-// Hip hop soul
-// Hip house
-// Industrial hip hop
-// Jazz rap
-// New jack swing
-// Pop rap
-// Punk rap
-// Ragga hip hop
-// Rap opera
-// Rap rock
-// Rap metal
-// Trap metal
-// Rapcore
-// Trip hop
-// Derived genres
-// Breakbeat
-// Baltimore club
-// Florida breaks
-// Ghetto house
-// Ghettotech
-// Glitch hop
-// Grime
-// Illbient
-// Latin freestyle
-// Wonky
-// Nu metal
-// Funk carioca
-// Reggaeton,
+        'Brooklyn drill',
+        'UK drill'
     ];
 
     
@@ -1542,7 +1504,7 @@ contract Dev is ERC721Enumerable, ReentrancyGuard, Ownable {
         string[19] memory parts;
         parts[0] = '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350"><style>.base { fill: black; font-family: serif; font-size: 14px; }</style><rect width="100%" height="100%" fill="white" /><text x="10" y="20" class="base">';
 
-        parts[1] = getOS(tokenId);
+        parts[1] = getGenres(tokenId);
 
         parts[2] = '</text><text x="10" y="40" class="base">';
 

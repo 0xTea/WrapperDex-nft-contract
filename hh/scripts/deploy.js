@@ -6,12 +6,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Dev = await hre.ethers.getContractFactory("Dev");
+  const Dev = await hre.ethers.getContractFactory("WRAP");
   const dev = await Dev.deploy();
 
   await dev.deployed();
 
-  console.log("Dev deployed to:", dev.address);
+  console.log("Wrappers deployed to:", dev.address);
 }
 
 main()
